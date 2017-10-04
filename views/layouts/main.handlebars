@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Eat da Burger!</title>
+    <link rel = "icon" type = "image/png" href = "../assets/images/batman-2.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+  </head>
+  <body>
+  
+    <div class="container">
+      
+
+      <center>
+        <div class="row">
+          <img src="../assets/images/batman_burger.png" class="responsive-img" id="burger_img">
+        </div>
+      </center>
+
+      <center>
+        <h1 class="blue-grey-text text-darken-4">Eat da Burger!</h1>
+      </center>
+      
+      
+
+      {{{body}}}
+
+
+
+      <form action="burger/create" method="POST"> 
+        
+        <div class="row">          
+            <div class="col s12">
+              <input id="new_burger" type="text" name="burger_name">
+              <label for="new_burger">Burger Name</label>
+            </div>
+        </div>
+        <center>
+           <button class="btn waves-effect waves-light black" id="submit-button" type="submit" name="action">Submit
+            <i class="material-icons right">room_service</i>
+           </button>
+        </center>
+
+      </form>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </body>
+</html>

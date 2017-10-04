@@ -1,0 +1,40 @@
+<div class="row">
+  <center>
+    <div class="col m6">
+      <h4 class="red-text text-darken-2">Ready to eat!</h4>
+      <div id="eat">
+
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class= "col s6">
+              <li>{{id}}. {{burger_name}}</li>
+            </div>
+            <div class = "col s3">
+                  <button class="btn waves-effect waves-light blue darken-4" type="submit" name="action">
+                  <i class="material-icons right">restaurant_menu</i>
+                  </button>
+            </div>
+          </form>
+          {{/unless}}
+        {{/each}}
+
+      </div>
+    </div>
+
+    <div class="col s6">
+      <h4 class="blue-text text-darken-4">Already eaten!</h4>
+      <div id="eaten">
+
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class = "col s12">
+              <li>{{this.id}}. {{this.burger_name}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+
+      </div>
+    </div>
+  </center>
+</div>
